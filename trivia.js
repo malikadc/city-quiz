@@ -38,16 +38,6 @@ function updateCounters() {
 
 
 
-// const nextButton = document.querySelector(".next-question");
-// const score = document.querySelector('question-number');
-// let correctCounter = 0;
-// let totalCounter = 0;
-
-// function displayScore() {
-
-// } 
-
-
 
 function showNextQuestion() {
     // clean all the correct/wrong classes
@@ -71,13 +61,12 @@ function showNextQuestion() {
         images[index].src = `png250px/${obj.flag}.png`;
         // update p tag using innerText
         countryNames[index].innerText = obj.country;
-        // cityName.innerText = `${obj.city}  is the capital of which country?`
     })
 
     answerIndex = _.random(0, 3);
     const questionCountry = options[answerIndex]
 
-    cityName.innerText = `${questionCountry.city}  is the capital of which country?`
+    cityName.innerText = `${questionCountry.city}  is the capital of which country`
 
     totalCounter++;
     updateCounters();
@@ -105,7 +94,7 @@ function onClick(ev) {
     else {
         ev.currentTarget.classList.add('answer-wrong');
         correctAnswerElement.classList.add('answer-correct');
-        answerStatusImage.src  = 'img/incorrect.png';
+        answerStatusImage.src  = 'img/wrong.png';
     }
     updateCounters();
     setTimeout(() => {
