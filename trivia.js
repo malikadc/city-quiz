@@ -1,19 +1,64 @@
 // asign veriable to -1
 let answerIndex = -1;
+let correctCounter = 0;
+let totalCounter = 0;
+
+// get all answer-options from flag-container
+let answerOptions = document.querySelectorAll(".answer-option");
+let answerStatusImage = document.querySelector(".answer-status-image");
+
+
 start();
 
-// const nextButton = document.querySelector(".next-btn");
-// const score = document.querySelector('#score');
+function start() {
+    // loop through each element by index
+    answerOptions.forEach(function(el, i) {
+        el.addEventListener('click', onClick)
+    });
+    
+    const nextButton = document.querySelector(".next-question");
+    nextButton.addEventListener("click", function() {
+        showNextQuestion();
+    })
+
+    const resetButton = document.querySelector(".reset");
+    resetButton.addEventListener("click", function() {
+        correctCounter = 0;
+        totalCounter = 0;
+        showNextQuestion();
+    })
+
+    showNextQuestion();
+}
+
+function updateCounters() {
+    document.querySelector('.question-number').innerText = totalCounter;
+    document.querySelector('.points-total').innerText = correctCounter;
+}
+
+
+
+// const nextButton = document.querySelector(".next-question");
+// const score = document.querySelector('question-number');
+// let correctCounter = 0;
+// let totalCounter = 0;
 
 // function displayScore() {
 
 // } 
 
-// nextButton.addEventListener("click", function() {
 
-// })
 
-function updateOptions(options) {
+function showNextQuestion() {
+    // clean all the correct/wrong classes
+    answerOptions.forEach(function(el){
+        el.classList.remove('answer-correct');
+        el.classList.remove('answer-wrong');
+    });
+    // clean previous answer status image
+    answerStatusImage.src = 'img/question.png';
+
+    const options = getRandomCountries();
     //populate flags, write down country names
     const images = document.querySelectorAll(".answer-option img");
     const countryNames = document.querySelectorAll(".country-name");
@@ -34,6 +79,11 @@ function updateOptions(options) {
 
     cityName.innerText = `${questionCountry.city}  is the capital of which country?`
 
+    totalCounter++;
+    updateCounters();
+
+    
+
     /** only updating the DOM for questions/answer for one random country */
 
 }
@@ -49,11 +99,18 @@ function onClick(ev) {
 
     if (ev.currentTarget == correctAnswerElement) {
         correctAnswerElement.classList.add('answer-correct');
+        answerStatusImage.src  = 'img/correct.png';
+        correctCounter++;
     }
     else {
         ev.currentTarget.classList.add('answer-wrong');
         correctAnswerElement.classList.add('answer-correct');
+        answerStatusImage.src  = 'img/incorrect.png';
     }
+    updateCounters();
+    setTimeout(() => {
+        showNextQuestion();
+    }, 2000); 
 }
 
 /**
@@ -73,25 +130,5 @@ function getRandomCountries() {
 
 
 
-function start() {
-    // get all answer-options from flag-container
-    let answerOptions = document.querySelectorAll(".answer-option");
-    // loop through each element by index
-    answerOptions.forEach(function(el, i) {
-        el.addEventListener('click', onClick)
-    });
-
-    getNextQuestions()
-
-    // creat variable and asigned a function to it
-    
-    // answerIndex = optionsAndAnswer.answerIndex;
-    
-}
-
-function getNextQuestions() {
-    const countries = getRandomCountries();
-    updateOptions(countries);
-}
 
 

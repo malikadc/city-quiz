@@ -21,9 +21,19 @@
 <body>
     <!-- a conrainer where the questions show up -->
     <div class="questions-container">
-        <div class="question-number">1/10</div>
-        <div class="question-text"></div>
-        <div class="points-total">1</div>
+        <div class="counter">
+            <div>Question Number</div>
+            <div class="question-number">0</div>
+        </div>
+        <div class="question-text-container">
+            <div class="question-text"></div>
+            <img class="answer-status-image">
+        </div>
+        <div class="counter">
+            <div>Total Points</div>
+            <div class="points-total">0</div>
+        </div>
+        
     </div>
     <!-- a container where I will store the answer options -->
     <div class="flags-container">
@@ -52,7 +62,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="data.js"></script>
     <script src="trivia.js"></script>
