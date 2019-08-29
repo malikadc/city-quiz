@@ -1,0 +1,136 @@
+body {
+    background-image: url("https://media.giphy.com/media/lRvTiw6t6WDrRAnaLQ/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-color: rgba(119, 131, 143, 0.829);
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 8pt;
+
+}
+
+header {
+    /* background-image: url(main.jpg); */
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+  
+.landing-page { 
+    background-image: url("img/mainImg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+.start-button {
+    background-color: #e7e7e7; color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20;
+    cursor:pointer;
+
+    
+}
+
+.button-holder{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+
+.button {
+    border-radius: 4px;
+    font-size: 15px; 
+    border: 2px solid;
+    box-shadow: 0px 4px 18px 0px;
+    height: 25px;
+}
+
+.questions-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    border-spacing: 0px;
+    color: white;
+    height: 200px;
+ 
+}
+.question-text {
+    /* background-color: rgba(212, 207, 198, 0.356); */
+    flex-grow: 1;
+    text-align: center;
+    padding: 26px;
+    height: 180px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    box-shadow: rgba(225, 236, 71, 0.8) 0 0 10px;
+    font-size: 3em;
+
+} 
+
+.question-number, .points-total{
+    width: 200px;
+    text-align: center;
+    
+}
+
+
+.flags-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px;
+    cursor:pointer;
+    height: 100px;
+    width: 150px;
+
+}
+
+.answer-option {
+    border: 2px;
+}
+
+.answer-option:hover {
+    -webkit-box-shadow: 10px 5px 40px 10px rgba(222, 232, 241, 0.57);
+    -moz-box-shadow: 10px 5px 40px 10px rgba(227, 231, 236, 0.57);
+    transition: all 0.3s ease 0s;
+}
+p {
+    text-align: center;
+    margin: 15px;
+    background-color: white;
+    height: 15px;
+    font-size: 10pt;
+   
+}
+@media only screen and (max-width: 600px) {
+    .flags-container {
+        font-size: 0.5em;
+        padding: 0;
+        display: block;
+    }
+}
+
+
+.answer-correct {
+    border: 3px solid green;
+}
+
+.answer-wrong {
+    border: 3px solid red;
+}

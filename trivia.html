@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+    <title>Trivia</title>
+</head>
+<header>
+    <div class="button-holder">
+        <button class="button reset">Reset</button>
+        <button class="button next-question">Next</button>
+    </div>
+</header>
+
+<body>
+    <!-- a conrainer where the questions show up -->
+    <div class="questions-container">
+        <div class="question-number">1/10</div>
+        <div class="question-text"></div>
+        <div class="points-total">1</div>
+    </div>
+    <!-- a container where I will store the answer options -->
+    <div class="flags-container">
+        <div class="answer-option answer0">
+            <img src="">
+            <div>
+                <p class="country-name">Country name</p>
+            </div>
+        </div>
+        <div class="answer-option answer1">
+            <img src="">
+            <div>
+                <p class="country-name">Country name</p>
+            </div>
+        </div>
+        <div class="answer-option answer2">
+            <img src="">
+            <div>
+                <p class="country-name">Country name</p>
+            </div>
+        </div>
+        <div class="answer-option answer3">
+            <img src="">
+            <div>
+                <p class="country-name">Country name</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="data.js"></script>
+    <script src="trivia.js"></script>
+</body>
+
+</html>
