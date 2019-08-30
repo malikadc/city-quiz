@@ -61,7 +61,7 @@ const allCountries = [
     },
     {
       "country": "Austria",
-      "city": "Wien",
+      "city": "Vienna",
       "flag": "at"
     },
     {
@@ -96,7 +96,7 @@ const allCountries = [
     },
     {
       "country": "Belgium",
-      "city": "Bruxelles [Brussel]",
+      "city": "Brussels",
       "flag": "be"
     },
     {
@@ -646,7 +646,7 @@ const allCountries = [
     },
     {
       "country": "Mexico",
-      "city": "Ciudad de M",
+      "city": "Mexico City",
       "flag": "mx"
     },
     {
