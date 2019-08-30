@@ -7,6 +7,7 @@ let correctCounter = 0;
 // asign counter for total number of questions
 let totalQuestion = 0;
 
+// asign max so we can have only 10 questions
 const maxQuestions = 10;
 
 
@@ -64,7 +65,7 @@ function onClick(ev) {
         answerStatusImage.src  = 'img/wrong.png';
     }
     // after all calling function updateCounters where we can update our question number & points
-    updateCounters();
+    // updateCounters();
     // here setting timeout for 2 seconds after which 
     setTimeout(() => {
         // and calling

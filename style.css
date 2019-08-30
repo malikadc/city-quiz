@@ -7,27 +7,41 @@ body {
 
 }
 
-.trivia-page {
-    background-image: url("https://media.giphy.com/media/lRvTiw6t6WDrRAnaLQ/giphy.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-header {
-    /* background-image: url(main.jpg); */
-    padding: 15px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-  
+/* background for index.html */
 .landing-page { 
     background-image: url("img/mainImg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #1e80f0;
 }
+
+/* for index.html, so you can click anywhere to get to trivia.html */
+.full-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+/* main background image for trivia.html*/
+.trivia-page {
+    background-image: url("https://media.giphy.com/media/lRvTiw6t6WDrRAnaLQ/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+header {
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 
 .start-button {
     background-color: #e7e7e7; color: black;
@@ -36,16 +50,9 @@ header {
     bottom: 20px;
     cursor:pointer;
     position: fixed;
-
-
-    
+  
 }
 
-/* .button-holder{
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-} */
 .button-holder {
     height: 150px;
 }
@@ -88,7 +95,6 @@ header {
     height: 200px;
 }
 .question-text-container {
-    /* background-color: rgba(212, 207, 198, 0.356); */
     flex-grow: 1;
     text-align: center;
     padding: 26px;
@@ -159,29 +165,22 @@ p {
     }
 }
 
+.capital-city {
+    color: rgb(201, 198, 16);
+}
 
 .answer-correct {
     border-color: #2fe22f;
-}
-
-.game-over-text {
-    font-size: 3em;
-    color: white;
-}
-.capital-city {
-    color: rgb(201, 198, 16);
 }
 .answer-wrong {
     border-color: #f12f2f;
 }
 
 
-.full-page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%; 
+.game-over-text {
+    font-size: 3em;
+    color: white;
 }
+
+
+
