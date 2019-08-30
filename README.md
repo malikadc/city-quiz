@@ -1,7 +1,7 @@
 # City Quiz
 
 Test your knowledge of the capital cities with this multiple choice trivia game.
-Play online at .....
+[Play online here](https://malikadc.github.io/city-quiz/)
 
 ## Rules
 When the game starts, you will be given multiple-choice questions covering your geography knowledge. 
