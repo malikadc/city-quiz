@@ -7,13 +7,7 @@ let correctCounter = 0;
 // asign counter for total number of questions
 let totalQuestion = 0;
 
-const maxQuestions = 3;
-
-// get all answer-options from flag-container
-let answerOptions = document.querySelectorAll(".answer-option");
-
-// get status of answer, so we can set right image-logo to it
-let answerStatusImage = document.querySelector(".answer-status-image");
+const maxQuestions = 10;
 
 
 // calling a function to start game
@@ -22,9 +16,11 @@ start();
 // create a function to start a game
 function start() {
 
+    // get all answer-options from flag-container
+    let answerOptions = document.querySelectorAll(".answer-option");
     // loop through each element by index
     answerOptions.forEach(function(el, i) {
-        // add eventListener and call the function onClick, which will give us randomly 4 options
+        // add eventListener and call the function onClick, which checks if answer is correct
         el.addEventListener('click', onClick)
     });
     // asign next question button and add EL and call function showNextQuestion
@@ -41,18 +37,16 @@ function start() {
         // and call function showNextQuestion right away
         showNextQuestion();
     })
-    // why we do it here again?
+
     showNextQuestion();
 }
 
 // create a function 
 function onClick(ev) {
-    console.log(ev.srcElement)
-    const correctAnswerElement = document.querySelector(`.answer${answerIndex}`);
-    console.log(correctAnswerElement)
 
-    console.log(answerIndex)
-    console.log(correctAnswerElement)
+    const correctAnswerElement = document.querySelector(`.answer${answerIndex}`);
+    // get status of answer, so we can set right image-logo to it
+    let answerStatusImage = document.querySelector(".answer-status-image");
 
     if (ev.currentTarget == correctAnswerElement) {
         correctAnswerElement.classList.add('answer-correct');
@@ -87,10 +81,14 @@ function showNextQuestion() {
     }
 
     // clean all the correct/wrong classes
+    // get all answer-options from flag-container
+    let answerOptions = document.querySelectorAll(".answer-option");
     answerOptions.forEach(function(el){
         el.classList.remove('answer-correct');
         el.classList.remove('answer-wrong');
     });
+    // get status of answer, so we can set right image-logo to it
+    let answerStatusImage = document.querySelector(".answer-status-image");
     // clean previous answer status image
     answerStatusImage.src = 'img/question.png';
 

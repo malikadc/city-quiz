@@ -576,7 +576,7 @@ const allCountries = [
     },
     {
       "country": "Luxembourg",
-      "city": "Luxembourg [Luxemburg/L",
+      "city": "Luxemburg",
       "flag": "lu"
     },
     {
