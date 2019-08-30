@@ -45,38 +45,40 @@ function start() {
 function onClick(ev) {
 
     const correctAnswerElement = document.querySelector(`.answer${answerIndex}`);
-    // get status of answer, so we can set right image-logo to it
+    // get status of answer, so we can set the right logo.png to it
     let answerStatusImage = document.querySelector(".answer-status-image");
-
+    // checking if the answer is correct
     if (ev.currentTarget == correctAnswerElement) {
+        // if it`s correct, it will show green border
         correctAnswerElement.classList.add('answer-correct');
+        // with correct.png logo inside the question-container
         answerStatusImage.src  = 'img/correct.png';
+        // and increment counter
         correctCounter++;
     }
     else {
         ev.currentTarget.classList.add('answer-wrong');
+        // if it`s not correct, it will show red border
         correctAnswerElement.classList.add('answer-correct');
+        // with wrong.png logo inside the question-container
         answerStatusImage.src  = 'img/wrong.png';
     }
+    // after all calling function updateCounters where we can update our question number & points
     updateCounters();
+    // here setting timeout for 2 seconds after which 
     setTimeout(() => {
+        // and calling
         showNextQuestion();
     }, 2000); 
 }
 
-
-// create a function where we can update our question number & points and show it on html
-function updateCounters() {
-    document.querySelector('.question-number').innerText = `${totalQuestion}/${maxQuestions}`;
-    document.querySelector('.points-total').innerText = correctCounter;
-}
-
-
-
 // 
 function showNextQuestion() {
+    // checking if you get to the 10th question
     if(totalQuestion === maxQuestions) {
+        // shows message on html with score calculated with Math.round
         document.querySelector('.game-over-text').innerHTML =`Game Over, your score is ${Math.round(correctCounter/totalQuestion * 100)}%`;
+        // using return so it will stop here
         return;
     }
 
@@ -117,7 +119,11 @@ function showNextQuestion() {
 
     
 
-    /** only updating the DOM for questions/answer for one random country */
+// create a function where we can update our question number & points and show it on html
+function updateCounters() {
+    document.querySelector('.question-number').innerText = `${totalQuestion}/${maxQuestions}`;
+    document.querySelector('.points-total').innerText = correctCounter;
+}
 
 }
 
