@@ -82,9 +82,10 @@ function showNextQuestion() {
         return;
     }
 
-    // clean all the correct/wrong classes
+ 
     // get all answer-options from flag-container
     let answerOptions = document.querySelectorAll(".answer-option");
+    // clean all the correct/wrong classes
     answerOptions.forEach(function(el){
         el.classList.remove('answer-correct');
         el.classList.remove('answer-wrong');
@@ -94,26 +95,31 @@ function showNextQuestion() {
     // clean previous answer status image
     answerStatusImage.src = 'img/question.png';
 
+    // using lodash libary to get randomly 4 countries from the array
     const options = _.sampleSize(allCountries, 4);
-    //populate flags, write down country names
-    const images = document.querySelectorAll(".answer-option img");
-    const countryNames = document.querySelectorAll(".country-name");
-    const cityName = document.querySelector(".question-text");
-    // loop through trivia object
 
-    /** old way, using forEach */
+    // asign image to the right box
+    const images = document.querySelectorAll(".answer-option img");
+
+    //populate flags, write down country names
+    const countryNames = document.querySelectorAll(".country-name");
+
+    // asign city name to the question text where it belongs
+    const cityName = document.querySelector(".question-text");
+    
+    // loop through trivia object
     options.forEach(function(obj, index) {
         // change image src
         images[index].src = `png250px/${obj.flag}.png`;
         // update p tag using innerText
         countryNames[index].innerText = obj.country;
     })
-
+    // shoose on of the options as correct answer, remember it`s index, so you can find right answer by it index
     answerIndex = _.random(0, 3);
     const questionCountry = options[answerIndex]
-
+    // shows questions on html
     cityName.innerHTML = `<span class="capital-city">${questionCountry.city}</span> is the capital of which country`
-
+    // increment total question
     totalQuestion++;
     updateCounters();
 
