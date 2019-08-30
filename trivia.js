@@ -42,7 +42,7 @@ function start() {
     showNextQuestion();
 }
 
-// create a function 
+
 function onClick(ev) {
 
     const correctAnswerElement = document.querySelector(`.answer${answerIndex}`);
@@ -64,7 +64,7 @@ function onClick(ev) {
         // with wrong.png logo inside the question-container
         answerStatusImage.src  = 'img/wrong.png';
     }
-    // after all calling function updateCounters where we can update our question number & points
+    // then we are calling function updateCounters, where we can update our question number & points
     // updateCounters();
     // here setting timeout for 2 seconds after which 
     setTimeout(() => {
@@ -73,7 +73,7 @@ function onClick(ev) {
     }, 2000); 
 }
 
-// 
+ 
 function showNextQuestion() {
     // checking if you get to the 10th question
     if(totalQuestion === maxQuestions) {
