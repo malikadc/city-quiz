@@ -1,15 +1,19 @@
-// asign veriable to -1
-let answerIndex = -1;
+// asign veriable to 0
+let answerIndex = 0;
+// asign counter for tracking correct answers
 let correctCounter = 0;
+// asign counter for total number of questions
 let totalCounter = 0;
 
 // get all answer-options from flag-container
 let answerOptions = document.querySelectorAll(".answer-option");
+// get status of answer, so we can set right image-logo to it
 let answerStatusImage = document.querySelector(".answer-status-image");
 
-
+// calling a function to start game
 start();
 
+// asign function to start a game
 function start() {
     // loop through each element by index
     answerOptions.forEach(function(el, i) {
@@ -48,7 +52,7 @@ function showNextQuestion() {
     // clean previous answer status image
     answerStatusImage.src = 'img/question.png';
 
-    const options = getRandomCountries();
+    const options = _.sampleSize(allCountries, 4);
     //populate flags, write down country names
     const images = document.querySelectorAll(".answer-option img");
     const countryNames = document.querySelectorAll(".country-name");
@@ -100,21 +104,6 @@ function onClick(ev) {
     setTimeout(() => {
         showNextQuestion();
     }, 2000); 
-}
-
-/**
- * return an array of four random countries from everything in allCountries
- */
-
-function getRandomCountries() {
-    const options = _.sampleSize(allCountries, 4);
-    return options
-
-    // answerIndex = _.random(0, 3);
-    // countryIndex = _.random(0, 3);
-    // console.log(answerIndex);
-
-
 }
 
 

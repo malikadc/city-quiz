@@ -148,6 +148,13 @@ p {
         padding: 0;
         display: block;
     }
+    .questions-container {
+        display: block;
+        height: auto;
+    }
+    .counter {
+        width: 100%;
+    }
 }
 
 
