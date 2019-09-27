@@ -1,13 +1,13 @@
-// asign veriable to 0
+// assign variable to 0
 let answerIndex = 0;
 
-// asign counter for tracking correct answers
+// assign counter for tracking correct answers
 let correctCounter = 0;
 
-// asign counter for total number of questions
+// assign counter for total number of questions
 let totalQuestion = 0;
 
-// asign max so we can have only 10 questions
+// assign max so we can have only 10 questions
 const maxQuestions = 10;
 
 
@@ -70,7 +70,7 @@ function onClick(ev) {
     setTimeout(() => {
         // and calling
         showNextQuestion();
-    }, 2000); 
+    }, 1500); 
 }
 
  

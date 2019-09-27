@@ -16,7 +16,7 @@ body {
 }
 
 /* for index.html, so you can click anywhere to get to trivia.html */
-.full-page {
+/* .full-page {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,11 +24,11 @@ body {
     bottom: 0;
     width: 100%;
     height: 100%; 
-}
+} */
 
 /* main background image for trivia.html*/
 .trivia-page {
-    background-image: url("https://media.giphy.com/media/lRvTiw6t6WDrRAnaLQ/giphy.gif");
+    background-image: url("https://images.unsplash.com/photo-1513492365349-8ba97c199501?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -43,15 +43,6 @@ header {
 }
 
 
-.start-button {
-    background-color: #e7e7e7; color: black;
-    font-size: 20px;
-    border-radius: 5px;
-    bottom: 20px;
-    cursor:pointer;
-    position: fixed;
-  
-}
 
 .button-holder {
     height: 150px;
@@ -59,23 +50,19 @@ header {
 
 .reset {
     float: left;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 15px; 
-    border: 2px solid;
     box-shadow: 0px 4px 18px 0px;
-    height: 25px;
     cursor:pointer;
-    color: green;
+    color: rgb(100, 104, 100);
 }
 .next-question {
     float: right;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 15px; 
-    border: 2px solid;
     box-shadow: 0px 4px 18px 0px;
-    height: 25px;
     cursor:pointer;
-    color: green;
+    color: rgb(100, 104, 100);
 }
 
 .button:hover {
@@ -97,11 +84,12 @@ header {
 .question-text-container {
     flex-grow: 1;
     text-align: center;
-    padding: 26px;
-    border: 1px solid yellow;
+    padding: 40px;
+    border: 2px solid rgb(85, 12, 37);
     border-radius: 10px;
-    box-shadow: rgba(225, 236, 71, 0.8) 0 0 10px;
-    font-size: 3em;
+    box-shadow: rgba(177, 157, 158, 0.8) 0 0 10px;
+    font-size: 4.5em;
+    color: rgb(58, 6, 24);
 } 
 
 .answer-status-image {
@@ -118,7 +106,7 @@ header {
 .flags-container {
     display: flex;
     justify-content: space-around;
-    padding: 60px;
+    padding: 70px;
 }
 
 img {
@@ -137,19 +125,26 @@ img {
     border-radius: 5px;
 }
 
+.answer-option p{
+    font-size: 2em;
+    color: white;
+
+}
+
+
 .answer-option:hover {
     -webkit-box-shadow: 10px 5px 40px 10px rgba(222, 232, 241, 0.57);
     -moz-box-shadow: 10px 5px 40px 10px rgba(227, 231, 236, 0.57);
     transition: all 0.3s ease 0s;
 }
-p {
+/* p {
     text-align: center;
     margin: 15px;
     background-color: white;
     height: 15px;
-    font-size: 10pt;
+    font-size: 20pt;
    
-}
+} */
 @media only screen and (max-width: 600px) {
     .flags-container {
         font-size: 0.5em;
@@ -166,7 +161,7 @@ p {
 }
 
 .capital-city {
-    color: rgb(201, 198, 16);
+    color: rgb(243, 240, 232);
 }
 
 .answer-correct {
