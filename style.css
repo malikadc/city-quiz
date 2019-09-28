@@ -42,6 +42,7 @@ header {
 
 }
 
+
 .button-holder {
     height: 150px;
 }
@@ -52,7 +53,7 @@ header {
     font-size: 15px; 
     box-shadow: 0px 4px 18px 0px;
     cursor:pointer;
-    color: rgb(100, 104, 100);
+    color: rgb(58, 6, 24);
 }
 .next-question {
     float: right;
@@ -60,7 +61,7 @@ header {
     font-size: 15px; 
     box-shadow: 0px 4px 18px 0px;
     cursor:pointer;
-    color: rgb(100, 104, 100);
+    color: rgb(58, 6, 24);
 }
 
 .button:hover {
@@ -74,7 +75,6 @@ header {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    padding: 8px;
     border-spacing: 0px;
     color: white;
     height: 200px;
@@ -82,11 +82,11 @@ header {
 .question-text-container {
     flex-grow: 1;
     text-align: center;
-    padding: 40px;
+    padding: 25px;
     border: 2px solid rgb(85, 12, 37);
     border-radius: 10px;
     box-shadow: rgba(177, 157, 158, 0.8) 0 0 10px;
-    font-size: 4.5em;
+    font-size: 3.5em;
     color: rgb(58, 6, 24);
 } 
 
@@ -104,7 +104,7 @@ header {
 .flags-container {
     display: flex;
     justify-content: space-around;
-    padding: 70px;
+    padding: 120px;
 }
 
 img {
