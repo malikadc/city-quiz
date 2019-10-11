@@ -70,13 +70,18 @@ header {
     transition: all 0.3s ease 0s;
 }
 
+.capital-city {
+    color: rgb(223, 223, 45);
+
+}
+
 .questions-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
     border-spacing: 0px;
-    color: white;
+    color: rgb(223, 223, 45);
     height: 200px;
 }
 .question-text-container {
@@ -98,7 +103,7 @@ header {
 .counter {
     width: 250px;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -159,9 +164,7 @@ img {
     }
 }
 
-.capital-city {
-    /* color: rgb(243, 240, 232); */
-}
+
 
 .answer-correct {
     border-color: #2fe22f;
