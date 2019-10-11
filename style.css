@@ -80,15 +80,15 @@ header {
     height: 200px;
 }
 .question-text-container {
-    background-color: rgba(60, 125, 220, 0.4);
+    background-color: rgba(144, 172, 214, 0.3);
     flex-grow: 1;
     text-align: center;
     padding: 25px;
     border: 2px solid rgb(85, 12, 37);
     border-radius: 10px;
-    box-shadow: rgba(177, 157, 158, 0.8) 0 0 10px;
+    box-shadow: rgba(177, 157, 158, 0.9) 0 0 20px;
     font-size: 3.5em;
-    color: rgb(58, 6, 24);
+    color: rgb(116, 7, 47);
 } 
 
 .answer-status-image {
