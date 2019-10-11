@@ -70,10 +70,7 @@ header {
     transition: all 0.3s ease 0s;
 }
 
-.capital-city {
-    color: rgb(223, 223, 45);
 
-}
 
 .questions-container {
     display: flex;
