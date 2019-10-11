@@ -80,7 +80,7 @@ header {
     height: 200px;
 }
 .question-text-container {
-    background-color: rgba(144, 172, 214, 0.3);
+    background-color: rgba(24, 30, 39, 0.4);
     flex-grow: 1;
     text-align: center;
     padding: 25px;
@@ -88,7 +88,7 @@ header {
     border-radius: 10px;
     box-shadow: rgba(177, 157, 158, 0.9) 0 0 20px;
     font-size: 3.5em;
-    color: rgb(116, 7, 47);
+    color: rgb(236, 229, 232);
 } 
 
 .answer-status-image {
