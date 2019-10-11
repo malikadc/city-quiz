@@ -80,6 +80,7 @@ header {
     height: 200px;
 }
 .question-text-container {
+    background-color: rgba(60, 125, 220, 0.4);
     flex-grow: 1;
     text-align: center;
     padding: 25px;
@@ -159,7 +160,7 @@ img {
 }
 
 .capital-city {
-    color: rgb(243, 240, 232);
+    /* color: rgb(243, 240, 232); */
 }
 
 .answer-correct {
