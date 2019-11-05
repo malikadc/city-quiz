@@ -24,12 +24,12 @@ function start() {
         // add eventListener and call the function onClick, which checks if answer is correct
         el.addEventListener('click', onClick)
     });
-    // asign next question button and add EL and call function showNextQuestion
+    // assign next question button and add EL and call function showNextQuestion
     const nextButton = document.querySelector(".next-question");
     nextButton.addEventListener("click", function() {
         showNextQuestion();
     })
-    // asign reset button and add EL so we can reset correctCounter & totalQuestion to 0;
+    // assign reset button and add EL so we can reset correctCounter & totalQuestion to 0;
     const resetButton = document.querySelector(".reset");
     resetButton.addEventListener("click", function() {
         correctCounter = 0;
@@ -96,16 +96,16 @@ function showNextQuestion() {
     // clean previous answer status image
     answerStatusImage.src = 'img/question.png';
 
-    // using lodash libary to get randomly 4 countries from the array
+    // using lodash library to get randomly 4 countries from the array
     const options = _.sampleSize(allCountries, 4);
 
-    // asign image to the right box
+    // assign image to the right box
     const images = document.querySelectorAll(".answer-option img");
 
     //populate flags, write down country names
     const countryNames = document.querySelectorAll(".country-name");
 
-    // asign city name to the question text where it belongs
+    // assign city name to the question text where it belongs
     const cityName = document.querySelector(".question-text");
     
     // loop through trivia object
@@ -115,7 +115,7 @@ function showNextQuestion() {
         // update p tag using innerText
         countryNames[index].innerText = obj.country;
     })
-    // shoose on of the options as correct answer, remember it`s index, so you can find right answer by it index
+    // choose on of the options as correct answer, remember it`s index, so you can find right answer by it index
     answerIndex = _.random(0, 3);
     const questionCountry = options[answerIndex]
     // shows questions on html
